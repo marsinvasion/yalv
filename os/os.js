@@ -27,7 +27,7 @@ var humanMem = function(mem){
 var totalMem = os.totalmem();
 info.totalMem = humanMem(os.totalmem());
 
-var load = function(){
+module.exports.load = function(){
   console.log("******");
   info.date=Date.now();
   info.loadAverage=os.loadavg();
@@ -37,4 +37,3 @@ var load = function(){
 }
 
 
-setInterval(load,1000);

@@ -1,5 +1,6 @@
 {
   "jobs":[
-    {"handle":"os","cron":"*/2 * * * * *"}
+    {"handle":"os", "cron":"*/2 * * * * *"},
+    {"handle":"log", "cron":"*/2 * * * * *"}
   ]
 }

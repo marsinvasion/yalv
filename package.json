@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Yet Another Monitoring Framework",
   "dependencies": {
-    "node-cron-jobs": "^1.0.3"
+    "node-cron-jobs": "^1.0.3",
+    "winston": "^1.0.1"
   },
   "scripts": {
     "start": "node jobs.js"

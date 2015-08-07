@@ -2,9 +2,11 @@
   "name": "yamf",
   "version": "1.0.0",
   "description": "Yet Another Monitoring Framework",
-  "main": "index.js",
   "dependencies": {
     "node-cron-jobs": "^1.0.3"
+  },
+  "scripts": {
+    "start": "node jobs.js"
   },
   "devDependencies": {},
   "repository": {

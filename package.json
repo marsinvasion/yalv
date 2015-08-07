@@ -1,0 +1,20 @@
+{
+  "name": "yamf",
+  "version": "1.0.0",
+  "description": "Yet Another Monitoring Framework",
+  "main": "index.js",
+  "dependencies": {
+    "node-cron-jobs": "^1.0.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marsinvasion/yamf.git"
+  },
+  "author": "Anoop Kulkarni (anoop.kulkarni@gmail.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marsinvasion/yamf/issues"
+  },
+  "homepage": "https://github.com/marsinvasion/yamf#readme"
+}

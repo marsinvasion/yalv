@@ -28,12 +28,12 @@ var totalMem = os.totalmem();
 info.totalMem = humanMem(os.totalmem());
 
 module.exports.load = function(){
-  console.log("******");
   info.date=Date.now();
   info.loadAverage=os.loadavg();
   info.freeMemory=humanMem(os.freemem());
   info.memoryUsed=humanMem(totalMem-os.freemem());
-  console.log(info);
+//  console.log("******");
+//  console.log(info);
 }
 
 

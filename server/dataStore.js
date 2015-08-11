@@ -2,16 +2,14 @@ module.exports = {
 
   obj:{},
 
-  onMessage:function(message){
-    var data = JSON.parse(message);
-    console.log(data, this.obj);
-    debugger;
-    var key = message.request+'~'+message.api+'~'+message.func
-    if('entering' === message.type){
-      this.obj[key]=message.time;
-    }else if('exiting' === message.type){
-      message.timeElapsed = message.time - this.obj[key];
-      console.log(message);
+  onMessage:function(msg){
+    var data = JSON.parse(msg);
+    var key = data.request+'~'+data.api+'~'+data.func
+    if('entering' === data.type){
+      this.obj[key]=data.time;
+    }else if('exiting' === data.type){
+      data.timeElapsed = new Date(data.time).getTime() - new Date(this.obj[key]).getTime();
+      console.log(data);
     }
   }
 

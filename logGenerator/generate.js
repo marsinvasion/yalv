@@ -9,7 +9,9 @@ var logger = bunyan.createLogger({
 });
 
 var logStr = function(type,requestId,api,func){
-  logger.info({type:type, requestId:requestId,api:api,func:func});
+  if(bunyan.INFO === logger.levels(0)){
+    logger.info({type:type, requestId:requestId,api:api,func:func});
+  }
 }
 
 var simulate = function(){

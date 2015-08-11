@@ -8,8 +8,8 @@ var logger = bunyan.createLogger({
   }]
 });
 
-var logStr = function(level,requestId,api,func){
-  logger.info('performance',{level:level, requestId:requestId,api:api,func:func});
+var logStr = function(type,requestId,api,func){
+  logger.info({type:type, requestId:requestId,api:api,func:func});
 }
 
 var simulate = function(){
@@ -18,10 +18,10 @@ var simulate = function(){
   logStr('entering','myuser','service','calculate');
   logStr('entering','myuser','db','getData');
 
-  setTimeout(logStr,3000,'exiting','myuser','web server','web call');
-  setTimeout(logStr,500,'exiting','myuser','user','getUser');
-  setTimeout(logStr,500,'exiting','myuser','service','calculate');
-  setTimeout(logStr,1000,'exiting','myuser','db','getData');
+  setTimeout(logStr,Math.random() * 1000,'exiting','myuser','web server','web call');
+  setTimeout(logStr,Math.random() * 1000,'exiting','myuser','user','getUser');
+  setTimeout(logStr,Math.random() * 1000,'exiting','myuser','service','calculate');
+  setTimeout(logStr,Math.random() * 1000,'exiting','myuser','db','getData');
 }
 
 module.exports = {

@@ -6,7 +6,7 @@ if [ -z "$fileName" ]; then
 fi
 str=$2
 if [ -z "$str" ]; then
-  str=performance
+  str=pid
 fi
 echo "tailing $fileName searching for $str"
 tail -f $fileName |

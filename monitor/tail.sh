@@ -9,7 +9,7 @@ if [ -z "$str" ]; then
   str=pid
 fi
 echo "tailing $fileName searching for $str"
-tail -f $fileName |
+tail -f --retry $fileName |
   while read line; do
     if [[ $line == *$str* ]]; then
       echo -n "$line" > /dev/udp/localhost/5201

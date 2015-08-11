@@ -12,6 +12,6 @@ echo "tailing $fileName searching for $str"
 tail -f $fileName |
   while read line; do
     if [[ $line == *$str* ]]; then
-      echo "$line"
+      echo -n "$line" > /dev/udp/localhost/5201
     fi
   done

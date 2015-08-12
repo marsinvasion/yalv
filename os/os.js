@@ -32,8 +32,7 @@ module.exports.load = function(){
   info.loadAverage=os.loadavg();
   info.freeMemory=humanMem(os.freemem());
   info.memoryUsed=humanMem(totalMem-os.freemem());
-  console.log("******");
-  console.log(info);
+  return info;
 }
 
 

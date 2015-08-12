@@ -3,10 +3,7 @@ var os = require('./os/os.js');
 var logGenerate = require('./logGenerator/generate.js');
 
 var jobCall = function(name, job){
-  if('os' === name){
-    job.addCallback(os.load);
-    job.start();
-  }else if('log' === name){
+  if('log' === name){
     job.addCallback(logGenerate.simulate);
     job.start();
   }

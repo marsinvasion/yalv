@@ -1,5 +1,5 @@
 var dgram = require('dgram');
-var dataStore = require('./dataStore.js');
+var dataStore = require('../store/dataStore.js');
 
 var sock = dgram.createSocket('udp4');
 

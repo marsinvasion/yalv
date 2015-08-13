@@ -14,6 +14,7 @@ module.exports = {
         data.timeElapsed = new Date(data.time).getTime() - new Date(this.obj[key]).getTime();
         data.os = os.load();
         console.log(data);
+        delete this.obj[key];
       }
     }
   }

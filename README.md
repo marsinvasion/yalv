@@ -26,3 +26,4 @@ None
 
 MIT
 
+Copyright (c) 2015 Anoop Kulkarni (http://anoopkulkarni.com)

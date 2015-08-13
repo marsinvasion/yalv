@@ -19,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/marsinvasion/yamf/issues"
   },
-  "homepage": "https://github.com/marsinvasion/yamf#readme"
+  "keywords":[
+    "monitoring framework",
+    "udp monitoring",
+    "request monitoring",
+    "request tracking"
+  ],
+  "homepage": "https://github.com/marsinvasion/yamf#readme",
+  "license":"MIT"
 }

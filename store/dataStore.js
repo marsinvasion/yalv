@@ -8,13 +8,18 @@ module.exports = {
     var data = JSON.parse(msg);
     var key = data.request+'~'+data.api+'~'+data.func
     if('entering' === data.type){
-      this.obj[key]=data.time;
+      if(this.obj[key]){
+        this.obj[key].push(data.time);
+      }else{
+        this.obj[key]=[data.time];
+      }
     }else if('exiting' === data.type){
-      if(this.obj[key]){ //if old logs are loaded, entering and exiting might be called at the same time
-        data.timeElapsed = new Date(data.time).getTime() - new Date(this.obj[key]).getTime();
+      if(this.obj[key]){ 
+        var objTime = this.obj[key].shift();
+        data.timeElapsed = new Date(data.time).getTime() - new Date(objTime);
         data.os = os.load();
-        console.log(data);
-        delete this.obj[key];
+	if(this.obj[key].length==0) delete this.obj[key];
+        console.log(data, this.obj,JSON.stringify(this.obj).length);
       }
     }
   }

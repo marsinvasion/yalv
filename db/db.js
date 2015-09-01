@@ -10,6 +10,15 @@ MongoClient.connect(url, function(err, mydb) {
 });
 
 module.exports = {
-  
+ 
+ insertLog:function(log, callback){
+
+   var logCollection = db.collection('logs');
+
+   logCollection.insert(log,function(err,result){
+     if(err) return callback(err,null);
+     callback(null,result);
+   });
+ }
 
 }

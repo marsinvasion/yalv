@@ -4,7 +4,7 @@
   "description": "Yet Another Monitoring Framework",
   "dependencies": {
     "bunyan": "^1.4.0",
-    "mongod": "^1.3.0",
+    "mongodb": "git+https://github.com/mongodb/node-mongodb-native.git",
     "node-cron-jobs": "^1.0.3"
   },
   "scripts": {

@@ -4,6 +4,8 @@
   "description": "Yet Another Monitoring Framework",
   "dependencies": {
     "bunyan": "^1.4.0",
+    "express": "^4.13.3",
+    "express-handlebars": "^2.0.1",
     "mongodb": "git+https://github.com/mongodb/node-mongodb-native.git",
     "node-cron-jobs": "^1.0.3"
   },

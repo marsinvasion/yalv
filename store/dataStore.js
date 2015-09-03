@@ -12,16 +12,16 @@ module.exports = {
 
   obj:{},
 
-  onMessage:function(msg){
+  onMessage:function(msg,start,end){
     var data = JSON.parse(msg);
     var key = data.request+'~'+data.api+'~'+data.func
-    if('entering' === data.type){
+    if(start === data.type){
       if(this.obj[key]){
         this.obj[key].push(data.time);
       }else{
         this.obj[key]=[data.time];
       }
-    }else if('exiting' === data.type){
+    }else if(end === data.type){
       if(this.obj[key]){ 
         var objTime = this.obj[key].shift();
         data.timeElapsed = new Date(data.time).getTime() - new Date(objTime);

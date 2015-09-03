@@ -25,7 +25,7 @@ module.exports = {
       if(this.obj[key]){ 
         var objTime = this.obj[key].shift();
         data.timeElapsed = new Date(data.time).getTime() - new Date(objTime);
-        data.os = os.load();
+        os.load(data);
         db.insertLog(data,callback);
         if(this.obj[key].length==0) delete this.obj[key];
         //console.log(data, this.obj,JSON.stringify(this.obj).length);

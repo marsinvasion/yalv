@@ -1,6 +1,6 @@
 var MongoClient = require('mongodb').MongoClient;
 var util = require('util');
-var url = 'mongodb://localhost:27017/yamf';
+var url = 'mongodb://localhost:27017/yalv';
 var db;
 
 MongoClient.connect(url, function(err, mydb) {

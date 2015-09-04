@@ -1,7 +1,7 @@
 {
-  "name": "yamf",
+  "name": "yalv",
   "version": "1.0.0",
-  "description": "Yet Another Monitoring Framework",
+  "description": "Yet Another Log Viewer",
   "dependencies": {
     "bunyan": "^1.4.0",
     "express": "^4.13.3",
@@ -15,12 +15,12 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/marsinvasion/yamf.git"
+    "url": "git+https://github.com/marsinvasion/yalv.git"
   },
   "author": "Anoop Kulkarni (anoop.kulkarni@gmail.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/marsinvasion/yamf/issues"
+    "url": "https://github.com/marsinvasion/yalv/issues"
   },
   "keywords": [
     "monitoring framework",
@@ -28,5 +28,5 @@
     "request monitoring",
     "request tracking"
   ],
-  "homepage": "https://github.com/marsinvasion/yamf#readme"
+  "homepage": "https://github.com/marsinvasion/yalv#readme"
 }

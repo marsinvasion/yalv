@@ -55,7 +55,7 @@ Each log entry will look like
 {"name":"app","hostname":"L-SFM4142Q32","pid":8912,"level":30,"type":"exiting","request":"2df4b3e3093da57548e0","api":"service","func":"calculate","msg":"","time":"2015-09-04T18:28:01.379Z","v":0}
 ```
 
-The service looks for type=entering and type=exiting and matches requests on same request,web server and func values.
+The service looks for type=entering,type=exiting and respective timestamps to match requests on same request,web server and func values.
 
 If your  application doesn't generate json logs, you can modify either bash script or udp server to change your log string to json formatted string in the above format.
 

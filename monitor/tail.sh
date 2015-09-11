@@ -9,7 +9,7 @@ if [ -z "$str" ]; then
   str=pid
 fi
 udpPort=$3
-if [ -z "$udpPort"]; then
+if [ -z "$udpPort" ]; then
   udpPort=5201
 fi
 echo "tailing $fileName searching for $str"

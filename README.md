@@ -23,16 +23,17 @@ node server/udp.js
 
 or
 
-./monitor/tail.sh app.log pid 5201
+./monitor/tail.sh /var/log/app.log pid 5201
 ```
-In the first scenario it looks for app.log in the current working directory. It tails app.log and if it finds a log with pid in the log file it sends it to the udp server on port 5201.
+In the first scenario it looks for app.log in the current working directory. It tails app.log and if it finds a string with pid in the log file it pushes to the udp server on port 5201.
 
 The second option lets you give the location of the log file, custom string to look for in each log entry and the udp port.
 
 - Mongodb
-  Mongodb location is configured in db/db.js. Change url variable to your location of mongodb instance
 
-It uses mongodb for the backend. If you would like to replace mongodb with another db, replace the functions in db/db.js with the equivalent for your db.
+  The service uses mongodb for the backend.
+  Mongodb location is configured in db/db.js. Change url variable to your location of mongodb instance
+  If you would like to replace mongodb with another db, replace the functions in db/db.js with the equivalent for your db.
 
 ## Supported Platforms
 - Linux/Mac
@@ -46,7 +47,13 @@ node jobs.js
 This will generate logs in app.log in your current working directory. It uses bunyan and node cron jobs to generate logs.
 Each log entry will look like 
 
-` {"name":"app","hostname":"L-SFM4142Q32","pid":8912,"level":30,"type":"entering","request":"2df4b3e3093da57548e0","api":"web server","func":"web call","msg":"","time":"2015-09-04T18:28:00.907Z","v":0}
+```
+{"name":"app","hostname":"L-SFM4142Q32","pid":8912,"level":30,"type":"entering","request":"2df4b3e3093da57548e0","api":"service","func":"calculate","msg":"","time":"2015-09-04T18:28:00.917Z","v":0}
+
+...
+
+{"name":"app","hostname":"L-SFM4142Q32","pid":8912,"level":30,"type":"exiting","request":"2df4b3e3093da57548e0","api":"service","func":"calculate","msg":"","time":"2015-09-04T18:28:01.379Z","v":0}
+```
 
 The service looks for type=entering and type=exiting and matches requests on same request,web server and func values.
 

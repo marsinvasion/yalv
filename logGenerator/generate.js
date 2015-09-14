@@ -29,7 +29,7 @@ var simulate = function(){
   setTimeout(logStr,Math.random() * 1000,'exiting',reqId,'user','getUser');
   setTimeout(logStr,Math.random() * 2000,'exiting',reqId,'service','setup calculation');
   setTimeout(logStr,Math.random() * 2000,'exiting',reqId,'service','calculate');
-  setTimeout(logStr,Math.random() * 2000,'exiting',reqId,'service','calculate');
+  setTimeout(logStr,Math.random() * 4000,'exiting',reqId,'service','calculate');
   setTimeout(logStr,Math.random() * 5000,'exiting',reqId,'db','getData');
   setTimeout(logStr,Math.random() * 1000,'exiting',reqId,'db','getUser');
 }

@@ -7,6 +7,14 @@ YALV helps you avoid the pain of manually tracing requests through logs. It requ
 
 ## Getting Started
 
+- Clone project
+
+- Install dependencies
+
+```
+npm install
+```
+
 YALV has two main components on the server side. A udp server listens for logs being sent and stores it in mongodb. A bash script tails logs and sends it to the udp server.
 
 Deploy the following on each server thats generating logs.

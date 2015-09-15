@@ -25,7 +25,7 @@ Deploy the following on each server thats generating logs.
 node server/udp.js
 ```
 
-- Start the monitoring script
+- Start live monitoring script
 ```
 ./monitor/tail.sh
 
@@ -36,6 +36,12 @@ or
 In the first scenario it looks for app.log in the current working directory. It tails app.log and if it finds a string with pid in the log file it pushes to the udp server on port 5201.
 
 The second option lets you give the location of the log file, custom string to look for in each log entry and the udp port.
+
+- Load historical logs
+```
+./monitor/loadLog.sh
+```
+It takes the same arguments as tail.sh
 
 - Mongodb
 

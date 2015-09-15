@@ -90,6 +90,6 @@ To check out the graphical representation of your logs check out [YALV-UI](https
 
 ## License
 
-MIT
+[MIT](LICENSE)
 
 Copyright (c) 2015 Anoop Kulkarni (http://anoopkulkarni.com)

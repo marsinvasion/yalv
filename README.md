@@ -37,11 +37,13 @@ In the first scenario it looks for app.log in the current working directory. It 
 
 The second option lets you give the location of the log file, custom string to look for in each log entry and the udp port.
 
+This reads each line and matches the entry/exit for a particular request. It also adds server snapshot at that moment in time, giving you the corresponding server load, RAM used, RAM free.
+
 - Load historical logs
 ```
 ./monitor/loadLog.sh
 ```
-It takes the same arguments as tail.sh
+It takes the same arguments as tail.sh. One disadvantage of using loading historical logs is you dont get server memory/load snapshot at the time of log generation. The memory/server load snapshots would be the server information at the time of file reading.
 
 - Mongodb
 

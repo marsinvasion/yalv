@@ -4,6 +4,8 @@ Yet Another Log Viewer
 
 YALV helps you avoid the pain of manually tracing requests through logs. It requires an entering and exiting log entry based on which it calculates the time required for execution and matches against the server metrics like server memory used, memory free, load average.
 
+[![YALV](http://img.youtube.com/vi/jGmAdl02XoE/0.jpg)](http://www.youtube.com/watch?v=jGmAdl02XoE)
+
 
 ## Getting Started
 
@@ -52,7 +54,7 @@ It takes the same arguments as tail.sh. One disadvantage of using loading histor
   If you would like to replace mongodb with another db, replace the functions in db/db.js with the equivalent for your db.
 
 ## Supported Platforms
-- Linux/Mac
+- Linux
 - Git bash on windows should work fine. (Load average will be [0,0,0] as that concept doesn't exist on windows)
 
 ## Generating logs

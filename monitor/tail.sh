@@ -13,9 +13,9 @@ if [ -z "$udpPort" ]; then
   udpPort=5201
 fi
 echo "tailing $fileName searching for $str"
-tail -f --retry $fileName 2>/dev/null |
+tail -F $fileName 2>/dev/null |
   while read line; do
     if [[ $line == *$str* ]]; then
-      echo -n "$line" > /dev/udp/localhost/$udpPort
+      echo -n "$line" | nc -w1 -u 127.0.0.1 $udpPort
     fi
   done

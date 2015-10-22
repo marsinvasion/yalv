@@ -15,6 +15,6 @@ fi
 echo "loading $fileName searching for $str"
 while read -r line || [[ -n "$line" ]]; do
   if [[ $line == *$str* ]]; then
-      echo -n "$line" > /dev/udp/localhost/$udpPort
+      echo -n "$line" | nc -w1 -u 127.0.0.1 $udpPort
   fi
 done < "$fileName"

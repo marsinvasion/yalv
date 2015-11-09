@@ -94,8 +94,6 @@ To check out the graphical representation of your logs check out [YALV-UI](https
 
 - [bunyan](https://github.com/trentm/node-bunyan): a JSON logging library for node.js services
 - [node-cron-jobs](https://github.com/marsinvasion/node-cron-jobs): Schedules cron like jobs
-- [express](https://github.com/strongloop/express): Fast, unopinionated, minimalist web framework
-- [express-handlebars](https://github.com/ericf/express-handlebars): A Handlebars view engine for Express which doesn&#39;t suck.
 - [mongodb](https://github.com/mongodb/node-mongodb-native): A node.js driver for MongoDB
 
 

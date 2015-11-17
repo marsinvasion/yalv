@@ -4,7 +4,9 @@ Yet Another Log Viewer
 
 YALV helps you avoid the pain of manually tracing requests through logs. It requires an entering and exiting log entry based on which it calculates the time required for execution and matches against the server metrics like server memory used, memory free, load average.
 
-[![YALV](http://img.youtube.com/vi/INgIQcOwZ2M/0.jpg)](http://www.youtube.com/watch?v=INgIQcOwZ2M)
+![](http://i.imgur.com/LMGf3BO.gif)
+
+Alternate [youtube link](http://www.youtube.com/watch?v=INgIQcOwZ2M)
 
 
 ## Getting Started
